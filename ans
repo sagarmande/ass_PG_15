@@ -1,0 +1,68 @@
+
+
+**Question 1:**
+```python
+def divisible_by_5_and_7(n):
+    for i in range(n+1):
+        if i % 5 == 0 and i % 7 == 0:
+            yield i
+
+n = int(input("Enter a value for n: "))
+result = divisible_by_5_and_7(n)
+print(','.join(map(str, result)))
+```
+
+**Question 2:**
+```python
+def even_numbers(n):
+    for i in range(n+1):
+        if i % 2 == 0:
+            yield i
+
+n = int(input("Enter a value for n: "))
+result = even_numbers(n)
+print(','.join(map(str, result)))
+```
+
+**Question 3:**
+```python
+def fibonacci_sequence(n):
+    fib = [0, 1]
+    [fib.append(fib[-1] + fib[-2]) for _ in range(2, n)]
+    return fib
+
+n = int(input("Enter a value for n: "))
+result = fibonacci_sequence(n)
+print(','.join(map(str, result)))
+```
+
+**Question 4:**
+```python
+def extract_username(email):
+    parts = email.split('@')
+    if len(parts) == 2:
+        return parts[0]
+    else:
+        return "Invalid email format"
+
+email = input("Enter an email address: ")
+username = extract_username(email)
+print(username)
+```
+
+**Question 5:**
+```python
+class Shape:
+    def __init__(self):
+        pass
+    
+    def area(self):
+        return 0
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+    def area(self):
+        return self.length ** 2
+```
